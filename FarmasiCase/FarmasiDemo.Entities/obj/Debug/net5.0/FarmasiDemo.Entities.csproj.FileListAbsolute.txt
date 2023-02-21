@@ -1,0 +1,12 @@
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\bin\Debug\net5.0\FarmasiDemo.Entities.deps.json
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\bin\Debug\net5.0\FarmasiDemo.Entities.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\bin\Debug\net5.0\ref\FarmasiDemo.Entities.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\bin\Debug\net5.0\FarmasiDemo.Entities.pdb
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\FarmasiDemo.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\FarmasiDemo.Entities.AssemblyInfoInputs.cache
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\FarmasiDemo.Entities.AssemblyInfo.cs
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\FarmasiDemo.Entities.csproj.CoreCompileInputs.cache
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\FarmasiDemo.Entities.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\ref\FarmasiDemo.Entities.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\FarmasiDemo.Entities.pdb
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.Entities\obj\Debug\net5.0\FarmasiDemo.Entities.csproj.AssemblyReference.cache

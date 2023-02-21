@@ -1,0 +1,59 @@
+﻿
+@{
+    @using FarmasiDemo.Models.Concrete;
+}
+@model List<ProductDto>
+<div class="row p-0 mt-4">
+
+    @foreach (var item in Model)
+    {
+
+        <div class="card text-center col-md-3">
+            <div class="card-header fs-20 font-weight-bolder">
+                @item.ProductName
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@item.UnitPrice₺</h5>
+                <p class="card-text">Pakette @item.QuantityPerUnit ürün vardır.</p>
+                <Button class="btn btn-primary" onclick="addToCart('@item.Id')">Sepete Ekle</Button>
+            </div>
+            <div class="card-footer text-muted">
+                @if (item.UnitsInStock == 0)
+                {
+                    <span>Stok Tükendi.</span>
+                }
+                else
+                {
+                    <span>Stokta @item.UnitsInStock adet vardır.</span>
+                }
+
+            </div>
+        </div>
+    }
+</div>
+<script>
+    function addToCart(productId) {
+        $.ajax({
+            type: "POST",
+            data: { productId: productId },
+            url: "@Url.Action("AddCartAjaxPop", "Home")",
+            success: function(result) {
+                if (result.success) {
+                    $("#basket-items").empty();
+                    result.data.forEach((item) => {
+                        $("#basket-items").append(`<a class='dropdown-item'>${item.product.productName}</a><span class="ml-2"> Miktar : ${item.quantity}</span><hr>`);
+                    })
+                    if (result.data.length == 0) {
+                        $("#basket-info").html(`Sepetinizde ürün bulunmamaktadır.`);
+                    }
+                    else {
+                        $("#basket-info").html(`Sepetinizde ${result.data.length} ürün bulunmaktadır.`);
+                    }
+                }
+                else {
+
+                }
+            }
+        })
+    }
+</script>

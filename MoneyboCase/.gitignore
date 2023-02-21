@@ -1,0 +1,11 @@
+MoneyboDemo.Dto/bin/Debug/
+.vs/
+MoneyboDemo.Dto/obj/
+MoneyboDemo.Services/obj/
+MoneyboDemo.Services/bin/
+MoneyboDemo.WebApp/bin/
+MoneyboDemo.WebApp/obj/
+MoneyboDemo/bin/
+MoneyboDemo/obj/
+MoneyboDemo.Model/obj/
+MoneyboDemo.Model/bin/

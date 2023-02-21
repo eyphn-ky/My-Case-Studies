@@ -1,0 +1,156 @@
+﻿@{
+}
+@using MoneyboDemo.Model.Enums
+<span>Yeni Bir Kullanıcı Ekleme Formu</span>
+<hr />
+<form action="" id="add-user-form">
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">İsim</label>
+        <input type="text" class="form-control" placeholder="ör. Ahmet Çiçek" name="Name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">E-posta</label>
+        <input type="email" class="form-control" placeholder="ör. ahmet.cicek@gmail.com" name="Email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="gender-selector">Cinsiyet : </label>
+        <select class="form-select" aria-label="Cinsiyet" id="gender-selector" name="GenderNumber" required>
+            <option value="">Belirtmek İstemiyorum</option>
+            <option value="@Convert.ToInt16(Gender.Male)">Erkek</option>
+            <option value="@Convert.ToInt16(Gender.Female)">Kadın</option>
+        </select>
+        <div class="alert alert-danger">Api'de cinsiyet "male yada female olmalı" bilgisi dönüyor boş kaydedilmiyor. O yüzden required</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>
+<hr />
+<button class="btn btn-success" onclick="GetAllUsers()">Kullanıcıları Getir</button>
+<div id="user-list">
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addToDoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="" id="add-todo-form">
+                <div class="modal-body">
+                    <span id="current-user"></span>
+                    <hr />
+                    <div class="mb-3">
+                        <input type="hidden" id="user_id_input" name="user_id" value=""/>
+                        <label for="toDoText" class="form-label">Yapılacak İş</label>
+                        <input id="toDoText" type="text" class="form-control" placeholder="ör. api bağlanacak" name="title">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="gender-selector">Durum : </label>
+                        <select class="form-select" aria-label="Durum" id="status-selector" name="status" required>
+                            <option value="Completed">Tamamlandı</option>
+                            <option value="Pending">Bekleniyor</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+
+        $("#add-user-form").submit(function (e) {
+            e.preventDefault();
+            var content = $("#add-user-form").serialize();
+            $.ajax({
+                type: "POST",
+                data: content,
+                url: "@Url.Action("AddUserAjaxPop","Home")",
+                success: function (result) {
+                    if (result.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Başarılı',
+                            text: 'Kullanıcı Başarılı Bir Şekilde Kaydedildi!'
+                        })
+                        GetAllUsers();
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Başarısız',
+                            text: 'Kullanıcı Eklenirken Bir Sorun İle Karşılaşıldı'
+                        })
+                    }
+                }
+            })
+        })
+    </script>
+    <script>
+        function GetAllUsers() {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetUserListAjaxPop", "Home")",
+                success: function (result) {
+                    if (result.success) {
+                        $("#user-list").empty();
+                        var table = "<div class='table-responsive'><table class='table'><thead><tr><th>Id</th><th>Name</th><th>Email</th><th>Gender</th><th>Status</th><th>Process</th></tr></thead><tbody>";
+                        result.data.forEach((item, index) => {
+                            table += `<tbody><tr><td>${item.id}</td><td>${item.name}</td><td>${item.email}</td><td>${item.gender}</td><td>${item.status}</td><td><button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addToDoModal" onclick="AddToDoToUser('${item.id}','${item.name}')"> To Do Ekle </button></td></tr></tbody>`;
+                        })
+                        $("#user-list").append(table);
+                    }
+                }
+            })
+        }
+    </script>
+    <!--Add Todo function-->
+    <script>
+        function AddToDoToUser(UserId, UserName) {
+            $("#current-user").html(UserName + " (" + UserId + ")");
+            $("#user_id_input").val(UserId);
+        }
+    </script>
+    <script>
+        $("#add-todo-form").submit(function (e) {
+            e.preventDefault();
+            var content = $("#add-todo-form").serialize();
+            $.ajax({
+                type: "POST",
+                data: content,
+                url: "@Url.Action("AddToDoToUserAjaxPop","Home")",
+                success: function (result) {
+                    if (result.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Başarılı',
+                            text: 'İş Kullanıcıya Başarılı Bir Şekilde Eklendi!'
+                        })
+                        GetAllUsers();
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Başarısız',
+                            text: 'İş Kullanıcıya Eklenirken Bir Sorunla Karşılaşıldı!'
+                        })
+                    }
+                }
+            })
+        })
+    </script>
+}

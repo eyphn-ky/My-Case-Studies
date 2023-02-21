@@ -1,0 +1,15 @@
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\bin\Debug\net5.0\FarmasiDemo.DataAccessLayer.deps.json
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\bin\Debug\net5.0\FarmasiDemo.DataAccessLayer.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\bin\Debug\net5.0\ref\FarmasiDemo.DataAccessLayer.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\bin\Debug\net5.0\FarmasiDemo.DataAccessLayer.pdb
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\bin\Debug\net5.0\FarmasiDemo.Entities.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\bin\Debug\net5.0\FarmasiDemo.Entities.pdb
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.AssemblyInfo.cs
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.csproj.CopyComplete
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\ref\FarmasiDemo.DataAccessLayer.dll
+C:\Users\eyuph\source\repos\FarmasiCaseDemo\FarmasiDemo.DataAccessLayer\obj\Debug\net5.0\FarmasiDemo.DataAccessLayer.pdb

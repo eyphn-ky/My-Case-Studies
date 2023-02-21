@@ -1,0 +1,369 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.WebAPI\\FarmasiDemo.WebAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\FarmasiDemo.DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\FarmasiDemo.DataAccessLayer.csproj",
+        "projectName": "FarmasiDemo.DataAccessLayer",
+        "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\FarmasiDemo.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\FarmasiDemo.Entities.csproj": {
+                "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\FarmasiDemo.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\FarmasiDemo.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\FarmasiDemo.Entities.csproj",
+        "projectName": "FarmasiDemo.Entities",
+        "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\FarmasiDemo.Entities.csproj",
+        "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Models\\FarmasiDemo.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Models\\FarmasiDemo.Models.csproj",
+        "projectName": "FarmasiDemo.Models",
+        "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Models\\FarmasiDemo.Models.csproj",
+        "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\FarmasiDemo.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\FarmasiDemo.DataAccessLayer.csproj"
+              },
+              "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\FarmasiDemo.Entities.csproj": {
+                "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Entities\\FarmasiDemo.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Services\\FarmasiDemo.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Services\\FarmasiDemo.Services.csproj",
+        "projectName": "FarmasiDemo.Services",
+        "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Services\\FarmasiDemo.Services.csproj",
+        "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\FarmasiDemo.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.DataAccessLayer\\FarmasiDemo.DataAccessLayer.csproj"
+              },
+              "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Models\\FarmasiDemo.Models.csproj": {
+                "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Models\\FarmasiDemo.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "HtmlAgilityPack.NetCore": {
+              "target": "Package",
+              "version": "[1.5.0.1, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.WebAPI\\FarmasiDemo.WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.WebAPI\\FarmasiDemo.WebAPI.csproj",
+        "projectName": "FarmasiDemo.WebAPI",
+        "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.WebAPI\\FarmasiDemo.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\eyuph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.WebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eyuph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Services\\FarmasiDemo.Services.csproj": {
+                "projectPath": "C:\\Users\\eyuph\\source\\repos\\FarmasiCaseDemo\\FarmasiDemo.Services\\FarmasiDemo.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
