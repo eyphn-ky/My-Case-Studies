@@ -1,0 +1,12 @@
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\bin\Debug\net5.0\VehicleFine.Entities.deps.json
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\bin\Debug\net5.0\VehicleFine.Entities.dll
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\bin\Debug\net5.0\ref\VehicleFine.Entities.dll
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\bin\Debug\net5.0\VehicleFine.Entities.pdb
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\VehicleFine.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\VehicleFine.Entities.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\VehicleFine.Entities.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\VehicleFine.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\VehicleFine.Entities.dll
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\ref\VehicleFine.Entities.dll
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\VehicleFine.Entities.pdb
+C:\Users\Admin\Desktop\Eyüphan KAYA One day task\VehicleFine.Entities\obj\Debug\net5.0\VehicleFine.Entities.csproj.AssemblyReference.cache

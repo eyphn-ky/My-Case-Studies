@@ -1,0 +1,189 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form action="@Url.Action("GetVehicleFineByPlate", "Home")" method="post" id="getVehicleFineByPlate">
+        <div class="mb-3">
+            <label for="plate" class="form-label">Please Enter License Plate</label>
+            <input type="text" class="form-control" id="plate" aria-describedby="carPlate">
+
+        </div>
+        <button type="submit" class="btn btn-primary">Ask for fines</button>
+        <div onclick="getAllVehicleFines()" class="btn btn-primary">Get All Vehicle Fines</div>
+        <div onclick="GroupAndCollectByLicensePlate()" class="btn btn-success float-right">Group and sum cost by license plate</div>
+
+    </form>
+
+    <div class="container-fluid border mt-2" id="vehicleFineContainer">
+
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    var requestSent = false;
+    $('#getVehicleFineByPlate').submit(function (e) {
+        e.preventDefault();
+        var plate = $('#plate').val();
+        if (plate == "" || plate == undefined) {
+            Swal.fire({
+                title: "Error",
+                text: "You Should Enter Plate Code",
+                icon: "error",
+                button: "Tamam",
+            });
+        }
+        else {
+            if (!requestSent) {
+                requestSent = true;
+                $.ajax({
+                    type: this.method,
+                    url: this.action,
+                    data: { plate: plate },
+                    success: function (result) {
+                        result = JSON.parse(result);
+                        if (result.success) {
+                            tableFillWithData(result);
+                        }
+                        else {
+                            Swal.fire({
+                                title: "Error",
+                                text: "an error occured",
+                                icon: "error",
+                                button: "Tamam",
+                            });
+                        }
+                    },
+                    complete: function () {
+                        requestSent = false;
+                    }
+                })
+            }
+        }
+    })
+
+</script>
+<script>
+    function tableFillWithData(result) {
+        var html = "<table class='table'><thead><tr><th scope = 'col' ></th><th scope='col'>Plate</th><th scope='col'>Vehicle Fine Realization Date</th><th scope='col'>Name</th><th scope='col'>Vehicle</th><th scope='col'>Reason</th><th>Cost</th><th>Payment Status</th></tr></thead><tbody>";
+        $.each(result.data, function (i, val) {
+            var date = new Date(val.vehicleFineRealizationDate);
+            var button = val.vehicleFineStatus.id == 1 ? "<div class='btn btn-success'>Paid</div>" : "<div class='btn btn-danger' onclick='payThePrice(" + val.id + ")'>Not Paid</div>";
+            html += "<tr><td></td><td>" + val.vehicle.plate + "</td><td>" + date.toDateString() + "</td><td>" + val.vehicle.owner.firstName + " " + val.vehicle.owner.lastName + "</td><td>" + val.vehicle.brand.brand1 + " " + val.vehicle.brand.model + " (" + val.vehicle.brand.year + ")" + "</td><td>" + val.vehicleFineReason.detail + "</td><td>"+val.cost+"₺</td><td>" + button + "</td></tr>"
+        });
+        html += "</tbody></table>";
+        $("#vehicleFineContainer").html(html);
+    }
+    function tableFillByPlateThenSum(result) {
+        //iterate and sum
+        var groupedList=[];
+        $.each(result.data, function (i, val) {
+            //first of all push an item to list
+            if (groupedList.length == 0) {
+                groupedList.push(val);
+                console.log(groupedList);
+            }
+            else {
+                var existingPlate = groupedList.find(x => x.vehicle.plate == val.vehicle.plate);
+                if (existingPlate != undefined) {
+                    existingPlate.cost += val.cost;
+                }
+                else {
+                    groupedList.push(val);
+                }
+            }
+        });
+
+        var html = "<table class='table'><thead><tr><th scope = 'col' ></th><th scope='col'>Plate</th><th scope='col'>Vehicle Fine Realization Date</th><th scope='col'>Name</th><th scope='col'>Vehicle</th><th scope='col'>Reason</th><th>Cost</th><th>Payment Status</th></tr></thead><tbody>";
+        $.each(groupedList, function (i, val) {
+            var date = new Date(val.vehicleFineRealizationDate);
+            var button = val.vehicleFineStatus.id == 1 ? "<div class='btn btn-success'>Paid</div>" : "<div class='btn btn-danger' onclick='payThePrice(" + val.id + ")'>Not Paid</div>";
+            html += "<tr><td></td><td>" + val.vehicle.plate + "</td><td>" + date.toDateString() + "</td><td>" + val.vehicle.owner.firstName + " " + val.vehicle.owner.lastName + "</td><td>" + val.vehicle.brand.brand1 + " " + val.vehicle.brand.model + " (" + val.vehicle.brand.year + ")" + "</td><td>" + val.vehicleFineReason.detail + "</td><td>"+val.cost+"₺</td><td>" + button + "</td></tr>"
+        });
+        html += "</tbody></table>";
+        $("#vehicleFineContainer").html(html);
+    }
+    function payThePrice(id) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("PayThePrice", "Home")",
+                data: {id:id},
+                success: function (result) {
+                    result = JSON.parse(result);
+                    if (result.success) {
+                        getAllVehicleFines();
+                    }
+                    else {
+                        Swal.fire({
+                            title: "Error",
+                            text: "an error occured",
+                            icon: "error",
+                            button: "Tamam",
+                        });
+                    }
+                }
+            })
+        }
+    
+</script>
+<script>
+    function getAllVehicleFines() {
+        if (!requestSent) {
+            requestSent = true;
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetAllVehicleFine", "Home")",
+                success: function (result) {
+                    result = JSON.parse(result);
+                    if (result.success) {
+                        tableFillWithData(result);
+                    }
+                    else {
+                        Swal.fire({
+                            title: "Error",
+                            text: "an error occured",
+                            icon: "error",
+                            button: "Tamam",
+                        });
+                    }
+                },
+                complete: function () {
+                    requestSent = false;
+                }
+            })
+        }
+    }
+</script>
+
+<script>
+    function GroupAndCollectByLicensePlate() {
+        if (!requestSent) {
+            requestSent = true;
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetAllVehicleFine", "Home")",
+                success: function (result) {
+                    result = JSON.parse(result);
+                    if (result.success) {
+                        tableFillByPlateThenSum(result);
+                    }
+                    else {
+                        Swal.fire({
+                            title: "Error",
+                            text: "an error occured",
+                            icon: "error",
+                            button: "Tamam",
+                        });
+                    }
+                },
+                complete: function () {
+                    requestSent = false;
+                }
+            })
+        }
+    }
+</script>

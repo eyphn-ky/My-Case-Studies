@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleFine.Core\VehicleFine.Core.csproj" />
+    <ProjectReference Include="..\VehicleFine.DataAccess\VehicleFine.DataAccess.csproj" />
+    <ProjectReference Include="..\VehicleFine.Entities\VehicleFine.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
